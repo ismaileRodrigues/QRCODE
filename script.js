@@ -16,8 +16,9 @@ const gerarQR = () => {
   }
 
 
-  const API =`https://chart.googleapis.com/chart?cht=qr&chs=250x250&chl=${texarea.value}`
-  document.querySelector('#QRCodeimage').src = API;
+const API = `https://quickchart.io/qr?text=${encodeURIComponent(texarea.value)}`
+document.querySelector('#QRCodeimage').src = API;
+
 
  texarea.value=''
  texarea.focus()
